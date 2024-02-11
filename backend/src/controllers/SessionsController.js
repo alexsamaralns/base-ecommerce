@@ -13,7 +13,7 @@ class SessionController {
       return res.status(200).json({ error: "User / password invalid!" });
     }
 
-    const resultCheck = await checkPassword(user[0].password, password);
+    const resultCheck = await checkPassword(user[0].userPassword, password);
 
     if (!resultCheck) {
       return res.status(200).json({ error: "User / password invalid!" });
